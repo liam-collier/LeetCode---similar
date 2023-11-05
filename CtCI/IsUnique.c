@@ -21,7 +21,7 @@ bool isUnique(char*pStr) {
         Arr[i] = false;
     }
     for (int i = 0; i < len; i++) {         //Iterate over string.
-        int ch = *(pStr + i);                //Convert char to ASCII value.
+        int ch = *(pStr + i);               //Convert char to ASCII value.
         if (Arr[ch]) {                      //Char already found, not unique string.
             return false;
         }
