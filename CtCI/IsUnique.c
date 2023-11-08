@@ -20,10 +20,10 @@ bool isUnique(char*pStr) {
     bool*pArr = (bool*)calloc(ARR_LEN, sizeof(bool));   //Initialise array of 256 false bools.
     for (int i = 0; i < len; i++) {                     //Iterate over string.
         int ch = *(pStr + i);                           //Convert char to ASCII value.
-        if (*(pArr + ch)) {                                  //Char already found, not unique string.
+        if (*(pArr + ch)) {                             //Char already found, not unique string.
             return false;
         }
-        *(pArr + ch) = true;                                 //Mark char as found in array.
+        *(pArr + ch) = true;                            //Mark char as found in array.
     }
     return true;                                        //No duplicates found.
 }
