@@ -21,10 +21,12 @@ bool isUnique(char*pStr) {
     for (int i = 0; i < len; i++) {                     //Iterate over string.
         int ch = *(pStr + i);                           //Convert char to ASCII value.
         if (*(pArr + ch)) {                             //Char already found, not unique string.
+            free(pArr);
             return false;
         }
         *(pArr + ch) = true;                            //Mark char as found in array.
     }
+    free(pArr);
     return true;                                        //No duplicates found.
 }
 
